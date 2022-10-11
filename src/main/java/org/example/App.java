@@ -73,5 +73,31 @@ public class App {
 
         //end of exercise 3
 
+        //begin of exercise 4
+        System.out.println("Choose 3 number to see the average of them!!!");
+        System.out.println("Write the first number:");
+        int A1 = scanner.nextInt();
+        System.out.println("Write the second number:");
+        int A2 = scanner.nextInt();
+        System.out.println("And write the third one:");
+        int A3 = scanner.nextInt();
+        int aresult = (A1 + A2 + A3) / 3;
+        System.out.println("(" + A1 + "+" + A2 + "+" + A3 + ")" + "/" + "3" + "=" + aresult);
+
+        //End of exercise 4
+
+        //Begin of exercise 5
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your name:");
+        String Name = sc.nextLine();
+        System.out.println("Hello" + " " + Name + " " + "!");
+
+        //End of exercise 5
+
+        //Begin of exercise 6
+
+
+
     }
 }
