@@ -1,9 +1,10 @@
 package org.example;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class App {
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         System.out.println("Hello");
         System.out.println("Farhad!");
@@ -17,12 +18,12 @@ public class App {
         //Scanner scanner = new Scanner(System.in);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a year");
-        int year = scanner.nextInt ();
-        boolean resultYear = (year % 4 == 0) && (year%100 !=0);
-        if (resultYear){
+        int year = scanner.nextInt();
+        boolean resultYear = (year % 4 == 0) && (year % 100 != 0);
+        if (resultYear) {
             System.out.println("leap year!");
 
-        }else {
+        } else {
             System.out.println("Not leap year");
         }
 
@@ -39,7 +40,7 @@ public class App {
         //int N2 = 11;
         int result = N1 + N2;
         //System.out.println("23 + 11 = " + result);
-        System.out.println(N1 +  "+" + N2 + "=" + result);
+        System.out.println(N1 + "+" + N2 + "=" + result);
 
         //subtraction begin here!
         System.out.println("Subtraction!!!");
@@ -108,12 +109,50 @@ public class App {
         int H = seconds / 60;
         int M = H % 60;
         H = H / 60;
-        System.out.print( H + ":" + M + ":" + S);
+        System.out.print(H + ":" + M + ":" + S);
         System.out.print("\n");
 
         //End of exercise 7
 
+        //Begin of exercise 8
+
+        int randoNumber = generateRandoNumber();
+        // define a while loop with its condition
+
+        while (true) {
+            System.out.println("Guess a number:");
+            int guessNumber = scanner.nextInt();
+            if (guessNumber < randoNumber) {
+                System.out.println("your guess is smaller than Random number");
+            } else if (guessNumber > randoNumber) {
+                System.out.println("your guess is greater than Random number");
+            } else {
+                System.out.println("Congratulation!!! your guess number is right");
+                break;
+            }
+
+        }
 
 
     }
+
+    public static int generateRandoNumber() {
+        int min = 1;
+        int max = 500;
+
+        System.out.println("Choose a random number between" + " " + min + " " + "and" + " " + max);
+        int random = (int) (Math.random() * max - min + 1) + min;
+        //Move next line System.out.println(random); if you want to NOT show the randomnumber to user!
+        //System.out.println(random);
+        return random;
+    }
+    //End of exercise 8
+
 }
+
+
+
+
+
+
+
